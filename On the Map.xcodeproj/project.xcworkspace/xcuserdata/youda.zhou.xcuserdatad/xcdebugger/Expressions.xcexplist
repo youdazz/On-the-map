@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in static UdacityClient.taskForPOSTRequest&lt;&#x3c4;_0_0, &#x3c4;_0_1&gt;(url:body:responseType:hasControl:completion:):UdacityClient.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "String(data: data, encoding: .utf8)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in static UdacityClient.taskForPOSTRequest&lt;&#x3c4;_0_0, &#x3c4;_0_1&gt;(url:body:responseType:completion:):UdacityClient.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "String(data: data, encoding: .utf8)!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static UdacityClient.login(username:password:completion:):UdacityClient.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in static UdacityClient.taskForGETRequest&lt;&#x3c4;_0_0&gt;(url:responseType:completion:):UdacityClient.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "String(data: data, encoding: .utf8)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in static UdacityClient.taskForGETRequest&lt;&#x3c4;_0_0&gt;(url:responseType:hasControl:completion:):UdacityClient.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "String(data: newData, encoding: .utf8)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
