@@ -19,6 +19,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "static UdacityClient.getMyPinLocation(completion:):UdacityClient.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Auth.accountId">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "static UdacityClient.login(username:password:completion:):UdacityClient.swift">
       </ContextState>
       <ContextState

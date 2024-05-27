@@ -32,11 +32,7 @@ class LoginViewController: UIViewController {
     }
     
     func setLoggingIn(_ loggingIn: Bool) {
-        if loggingIn {
-            activityIndicator.startAnimating()
-        } else {
-            activityIndicator.stopAnimating()
-        }
+        loggingIn ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
         activityIndicator.isHidden = !loggingIn
         usernameTextField.isEnabled = !loggingIn
         passwordTextField.isEnabled = !loggingIn
@@ -55,7 +51,6 @@ class LoginViewController: UIViewController {
     func handleLoginResponse(success: Bool, error: Error?) {
         setLoggingIn(false)
         if success {
-            print(UdacityClient.Auth.sessionId)
             self.performSegue(withIdentifier: "completeLogin", sender: nil)
         } else {
             showErrorLogin(message: error?.localizedDescription ?? "Unkown Error")

@@ -145,20 +145,22 @@ class UdacityClient {
         let limit = "100"
         taskForGETRequest(url: Endpoints.studenLocations(limit,nil).url, responseType: StudentLocationsResponse.self) { response, error in
             if let response = response {
-                completion(response.results,nil)
+                StudentInformationModel.studentInformation = .init(locations: response.results ?? [])
+                completion(response.results ?? [], nil)
             } else {
                 completion([], error)
             }
         }
     }
     
-    class func getMyPinLocation(completion: @escaping (StudentLocation?, Error?) -> Void) {
+    class func getMyPinLocation(completion: @escaping (Bool, Error?) -> Void) {
         let limit = "1"
         taskForGETRequest(url: Endpoints.studenLocations(limit,Auth.accountId).url, responseType: StudentLocationsResponse.self) { response, error in
             if let response = response {
-                completion(response.results.first,nil)
+                StudentInformationModel.myPin = response.results?.first
+                completion(true,nil)
             } else {
-                completion(nil, error)
+                completion(false, error)
             }
         }
     }

@@ -34,6 +34,7 @@
 		C4C25BDC2BFB9BAE00ECC908 /* StudenLocationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C25BDB2BFB9BAE00ECC908 /* StudenLocationsResponse.swift */; };
 		C4C25BDE2BFB9D5500ECC908 /* StudentInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C25BDD2BFB9D5500ECC908 /* StudentInformationModel.swift */; };
 		C4C25BE02BFBAF4600ECC908 /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C25BDF2BFBAF4600ECC908 /* StudentListViewController.swift */; };
+		C4CB5D9F2C04C42E0044FCD3 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CB5D9E2C04C42E0044FCD3 /* LoginViewControllerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		C4C25BDB2BFB9BAE00ECC908 /* StudenLocationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudenLocationsResponse.swift; sourceTree = "<group>"; };
 		C4C25BDD2BFB9D5500ECC908 /* StudentInformationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInformationModel.swift; sourceTree = "<group>"; };
 		C4C25BDF2BFBAF4600ECC908 /* StudentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListViewController.swift; sourceTree = "<group>"; };
+		C4CB5D9E2C04C42E0044FCD3 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewControllerTest.swift; path = "On the MapTests/LoginViewControllerTest.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		C4C25B7D2BFB502E00ECC908 = {
 			isa = PBXGroup;
 			children = (
+				C4CB5D9E2C04C42E0044FCD3 /* LoginViewControllerTest.swift */,
 				C4C25B882BFB502E00ECC908 /* On the Map */,
 				C4C25B9F2BFB503200ECC908 /* On the MapTests */,
 				C4C25BA92BFB503200ECC908 /* On the MapUITests */,
@@ -396,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4CB5D9F2C04C42E0044FCD3 /* LoginViewControllerTest.swift in Sources */,
 				C4C25BA12BFB503200ECC908 /* On_the_MapTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -108,9 +108,21 @@
                             <constraint firstItem="BO1-qz-XtZ" firstAttribute="trailing" secondItem="VxA-C1-tn8" secondAttribute="trailing" id="nII-Nb-bxk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vgX-uV-bUu"/>
+                    <navigationItem key="navigationItem" id="YoM-jj-OFR">
+                        <barButtonItem key="leftBarButtonItem" image="arrowshape.turn.up.backward" catalog="system" id="uKe-Rm-sNf">
+                            <connections>
+                                <action selector="logoutTapped:" destination="PvE-j6-p0O" id="z8R-Sc-pzY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="pin" catalog="system" id="9iD-Q8-mMr">
+                            <connections>
+                                <action selector="postNewInformationTapped:" destination="PvE-j6-p0O" id="he8-Bi-8ih"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="VxA-C1-tn8" id="G09-dJ-IRo"/>
+                        <segue destination="Xxq-YM-Z98" kind="presentation" identifier="informationPostingView" modalPresentationStyle="fullScreen" id="UwV-dk-HCf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GRh-6J-adz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -301,7 +313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aer-RC-1yn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5104.580152671756" y="543.66197183098598"/>
+            <point key="canvasLocation" x="5355" y="167"/>
         </scene>
         <!--List-->
         <scene sceneID="Teb-cy-duB">
@@ -338,9 +350,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IXP-I6-Fov" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4177.8625954198469" y="543.66197183098598"/>
+            <point key="canvasLocation" x="4277" y="167"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dIR-OP-hor"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="104"/>
         <image name="list.bullet" catalog="system" width="128" height="87"/>

@@ -17,15 +17,6 @@ class StudentListViewController: UITableViewController {
     
     // MARK: Functions
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        UdacityClient.getMyPinLocation { location, error in
-            StudentInformationModel.myPin = location
-        }
-    }
 
     // MARK: - Table view data source
 

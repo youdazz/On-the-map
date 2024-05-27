@@ -26,10 +26,6 @@ class InformationPostingViewController: UIViewController, MKMapViewDelegate {
     
     // MARK: Functions
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         let reuseId = "pin"
@@ -78,8 +74,12 @@ class InformationPostingViewController: UIViewController, MKMapViewDelegate {
     func updatePin() {
         let annotation = MKPointAnnotation()
         annotation.coordinate = mark!.location!.coordinate
-        self.mapView.addAnnotation(annotation)
-        self.mapView.setCenter(annotation.coordinate, animated: true)
+        mapView.addAnnotation(annotation)
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: annotation.coordinate, span: span)
+        mapView.setRegion(region, animated: true)
+        //mapView.setCenter(annotation.coordinate, animated: true)
     }
     
     @IBAction func didTapSubmitButton() {
@@ -100,16 +100,30 @@ class InformationPostingViewController: UIViewController, MKMapViewDelegate {
     }
     
     func handlePostInformationResponse(success: Bool, error: Error?) {
-        activityIndicator.stopAnimating()
         if success {
-            self.dismiss(animated: true)
+            updateMyPinLocation()
         } else {
             showError(message: error?.localizedDescription)
+            activityIndicator.stopAnimating()
         }
     }
     
     func showError(message: String?) {
         showAlertController(title: "Error", message: message ?? "", actions: [.init(title: "Cancel", style: .default)])
+    }
+    
+    func updateMyPinLocation() {
+        UdacityClient.getMyPinLocation(completion: handleMyPinLocationResponse(success:error:))
+    }
+    
+    func handleMyPinLocationResponse(success: Bool, error: Error?) {
+        activityIndicator.stopAnimating()
+        if success {
+            self.dismiss(animated: true)
+        }
+        if let error = error {
+            self.showAlertController(title: "Error loading data", message: error.localizedDescription, actions: [.init(title: "Cancel", style: .default)])
+        }
     }
     
     @IBAction func didTapCancel(_ sender: Any?) {
